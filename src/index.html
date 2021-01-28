@@ -1,12 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html class="principal">
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Pokédex</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Aclonica&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <header>
+      <!--Logo principal-->
+        <div class="logo-padre">
+          <img class="pokedex" src="./img/Pokémon-titulo.png">
+          <img class="pokeball" src="./img/Pokeball.png">
+        </div>
+      </div>
+      
+        
+       <!--Filtrado-->
+      <nav class="menu">
+        <ul>
+          <li><a href="#">Filtros</a>
+            <ul>
+              <li><a href="#">Núero de Pokemon</a></li>
+              <li><a href="#">Candy-cost</a></li>
+              <li><a href="#">Johto</a></li>
+              <li><a href="#">Kanto</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      
+    </header>
+    <!-- Incluye Botones para los tipos de pokemon / Top 10 de pokemon / Filtrado kanto / todos / Johto-->
+    <main>
+      <!--Botones para los tipos de pokemon-->
+      <div class="container--btns">
+        <a title="grass" href="./categories/grass.html"> 
+          <button class="grass">grass</button></a>
+        <a title="poison" href="./categories/poison.html"> 
+          <button class="poison">poison</button></a>
+        <a title="fire" href="./categories/fire.html"> 
+          <button class="fire">fire</button></a>
+        <a title="flying" href="./categories/flying.html"> 
+          <button class="flying">flying</button></a>
+        <a title="water" href="./categories/water.html">
+          <button class="water">water</button></a>
+        <a title="bug" href="./categories/bug.html">  
+          <button class="bug">bug</button></a>
+        <a title="normal" href="./categories/normal.html"> 
+          <button class="normal">normal</button></a>
+        <a title="electric" href="./categories/electric.html">
+          <button class="electric">electric</button></a>
+        <a title="ground" href="./categories/ground.html">
+          <button class="ground">ground</button></a>
+        <a title="fighting" href="./categories/fighting.html">  
+          <button class="fighting">fighting</button></a>
+        <a title="psychic" href="./categories/psychic.html">
+          <button class="psychic">psychic</button></a>
+        <a title="rock" href="./categories/rock.html"> 
+          <button class="rock">rock</button></a>
+        <a title="ghost" href="./categories/ghost.html">  
+          <button class="ghost">ghost</button></a>
+        <a title="ice" href="./categories/ice.html">
+          <button class="ice">ice</button></a>
+        <a title="dragon" href="./categories/dragon.html">  
+          <button class="dragon">dragon</button></a>
+        <a title="dark" href="./categories/dark.html">
+          <button class="dark">dark</button></a>
+        <a title="steel" href="./categories/steel.html"> 
+          <button class="steel">steel</button></a>
+        <a title="fairy" href="./categories/fairy.html">
+        <button class="fairy">fairy</button></a>
+      </div>
+
+      <!--Top 10 de pokemon
+      <section>
+        <button class="derecha"> Top 10 </button>
+        <button class="izquierda"> Top 10 </button>
+      </section>-->
+      <!--Filtrado kanto / todos / Johto-->
+      <section>
+        <div>
+          <a title="Kanto" href="./generations/kanto.html">
+            <img class="kantostart" src="./img/kanto-starters.png" alt="kanto pokemon starters" title="kanto pokemon starters"/>
+          </a>
+        </div>
+        <div>
+          <a title="Todos" href="./generations/todos.html">
+            <img class="pokemonstart" src="./img/Pokémon-starters.jpg" alt="Pokemon starters Johto and kanto" title="Pokemon starters Johto and kanto"/>
+          </a>
+        </div>
+        <div>
+          <a title="Johto" href="./generations/johto.html">
+            <img class="jothostart" src="./img/johto-starters.jpg" alt="Johto pokemon starters" title="Johto pokemon starters"/>
+          </a>
+        </div>
+      </section>
+      
+       <!-- Trajetas pokemons
+       <section>
+        <div class="tarjetas">
+          <div class="center">
+            <div class="property-card">
+              <div class="circulo"> 
+                <div class="rectangulo"> 
+              </div>
+            </div>   
+          </div>
+        </div> 
+        </section>-->
+    </main>
+    <!--Botones Pokédex-regreso / Favoritos-->
+    <footer></footer>
+     <div id="root"></div>
     <script src="main.js" type="module"></script>
   </body>
-</html>
+</html> 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html class="principal">
+  <head>
+    <meta charset="utf-8">
+    <title>Pokédex</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=ABeeZee&family=Aclonica&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <header>
+      <!--Logo-Titulo-->
+        <div class="logo-padre">
+          <img class="pokedex" src="../img/Pokémon-titulo.png">
+          <img class="pokeball" src="../img/Pokeball.png">
+          <!--Titulo-->
+         <h1 class="title">Kanto</h1>
+        </div>
+       <!--Menu hamburguesa-->
+      <nav class="menu">
+        <ul>
+          <li><a href="#">Filtros</a>
+            <ul>
+              <li><a href="#">Núero de Pokemon</a></li>
+              <li><a href="#">Candy-cost</a></li>
+              <li><a href="#">Johto</a></li>
+              <li><a href="#">Kanto</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!--Todos los pokemon-->
+      <section class="container--cards" id=filterkanto></section>
+    </main>
+    <!--Botones Pokédex-regreso / Favoritos-->
+    <footer></footer>
+     <div id="root"></div>
+    <script src="../main.js" type="module"></script>
+  </body>
+</html> 

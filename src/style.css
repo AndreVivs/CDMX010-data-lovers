@@ -1,0 +1,297 @@
+/*
+1.Posicionamiento
+2.Modelo de caja (Box model)
+3.Tipografia
+4.Efectos visuales
+5.Miselaneos u otros
+*/
+html.principal{
+    background-image: url("./img/fondo principal.jpg");
+}
+
+:root{
+    /*Implementar variables */
+    --blue-btn: #3E66FB;
+    --yellow-title: #FFCB05;
+    --blue-border-title:#2B72B9;
+}
+
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+/*
+font-family: 'ABeeZee', sans-serif; para la informacion
+font-family: 'Aclonica', sans-serif;  para los titulos
+*/
+body{
+    min-width: 288px;
+}
+
+html{
+    font-size: 62.5%;
+    
+}
+
+header{
+    display: inline block;
+    width: 100%;
+    min-width: 288px;
+    max-width: 111px;
+    height: 210px;
+    
+}
+
+
+.logo-padre{
+    display: flex;
+    width: 150%;
+    align-content: space-between;
+    align-items: center;
+}
+
+.pokedex {
+    width: 75%;
+}
+
+.pokeball {
+    width: 15%
+}
+
+h1.title{
+    width:50%;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 7vmax;
+    color: var(--yellow-title);
+    text-shadow: 4px 2px 1px var(--blue-border-title);
+    display: inline-block;
+    margin: 20px;
+    text-align: right;
+}
+
+nav{
+    display: flex;
+
+}
+
+.menu{
+    width: 250px;
+    height: 40px;
+    right: 300px;
+    top: 25px;
+    border-radius: 5px;
+}
+
+.menu ul {
+    list-style: none;
+    position: sticky;
+    top: 20px;
+}
+.menu a {
+    width: 250px;
+    height: 40px;
+    display: flex;
+    padding: 1em;
+    background-color: #F9B53C;
+    text-decoration: none;
+    color: #ffffff;
+    border-radius: 5px;
+}
+.menu a:hover {
+    width: 250px;
+    height: 40px;
+    background-color: #CC673B;
+}
+.menu ul li ul {
+    width: 250px;
+    height: 40px;
+    display: none;
+}
+.menu ul li a:hover + ul, .menu ul li ul:hover {
+    width: 250px;
+    height: 40px;
+    display: block;
+}
+
+.container--btns{
+    margin: 5px 50px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container--cards{
+    margin: 15px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #fff;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 15px;
+    border-style: dashed;
+}
+
+article.pokemon{
+    margin: 60px;
+    border-style: outset;
+}
+
+button{
+    width: 80px;
+    height: 32px;
+    top: -3px;
+    border-radius: 10px;
+    margin: 8px;
+    border: 0;
+    font-weight: bold;
+    color: rgb(233, 228, 238);
+    cursor: pointer;
+}
+
+button.grass{
+    background-color: rgb(40 112 55);
+}
+
+button.poison{
+    background-color: rgb(201 128 255);
+}
+
+button.fire{
+    background-color: #f38508;
+}
+
+button.flying{
+    background-color: rgb(17 164 226);
+}
+
+button.water{
+    background-color: rgb(44 86 217);
+}
+
+button.bug{
+    background-color: rgb(118 180 26 / 87%);
+}
+
+button.normal{
+    background-color: rgb(236 86 133 / 81%);
+}
+
+button.electric{
+    color: rgb(9, 7, 10);
+    background-color: rgb(245 242 54);
+}
+
+button.ground{
+    background-color: rgb(115 64 64);
+}
+
+button.fighting{
+    background-color: rgb(201 18 18);
+}
+
+button.psychic{
+    background-color: rgb(234 37 179);
+}
+
+button.rock{
+    background-color: rgb(209 183 44);
+}
+
+button.ghost{
+    background-color: rgb(73 25 86 / 74%);
+}
+
+button.ice{
+    background-color: rgb(7 181 193 / 82%);
+}
+
+button.dragon{
+    background-color: rgb(251 23 23 / 75%);
+}
+
+button.dark{
+    background-color: rgb(20 22 21);
+}
+
+button.steel{
+    background-color: rgb(74 79 105 / 62%);
+}
+
+button.fairy{
+    background-color: rgb(121 64 191 / 83%);
+}
+
+.kantostart{
+    position: absolute;
+    width: 241px;
+    height: 158px;
+    left: 94px;
+    top: 431px;
+    border-radius: 25px;
+}
+
+.pokemonstart{
+    position: absolute;
+    width: 285.78px;
+    height: 163.96px;
+    left: 496.36px;
+    top: 431px;
+    border-radius: 25px;
+    transform: rotate(0.13deg);
+}
+
+.jothostart{
+    position: absolute;
+    width: 271px;
+    height: 164px;
+    left: 900px;
+    top: 432px;
+    border-radius: 25px;
+}
+
+
+.tarjetas {
+    display: flex;
+    flex-direction: column auto;
+    align-items: start ;
+    background-color:pink;
+    padding: 3em;
+}
+
+.property-card
+{
+  height:16em;
+  width:12em;
+  display:flex;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:  9px 9px 21px #4682B4;
+  background-color:#FFA500;
+  justify-content: center;
+  border: 2px solid #4682B4;
+}
+
+.circulo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: #48D1CC;
+    border: 5px groove #FF6347;
+    padding-top: 10px;
+    margin: 1em auto 2em;
+}
+
+.rectangulo {
+    width: 90px; 
+    height: 40px; 
+    border: 1px ridge #FF6347;
+    background: #428bca;
+    border-radius:7px;
+    margin: 8em auto 1em;
+}
+
+
+
+
+
