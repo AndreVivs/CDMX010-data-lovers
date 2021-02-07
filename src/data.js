@@ -1,3 +1,13 @@
+/*Manipulación de datos a través de arreglos y objetos.
+- FilterData(data, condition): Filter recibira la data, y retornará aquellos datos que cumplan con la condición.
+- SortData(data, sortBy, sortOrder): Sort u ordenar recibe tres parámetros. 
+    data, nos entrega los datos.
+    sortBy, nos dice cuál de los campos de la data se quiere ordenar. 
+    sortOrder, indica si se quiere ordenar de manera ascendente o descendente.
+-computeStats(data): Permitirá hacer cálculos estadísticos básicos para ser mostrados de acuerdo a la data proporcionada.
+Las funciones son independientes del DOM y serán usadas desde src/main.js para:
+ -cargar la página
+ -cada vez que el usuario interactúe (click, filtrado, ordenado, ...).*/
  import data from './data/pokemon/pokemon.js';
  export const pokemons = data.pokemon;
  
@@ -18,11 +28,12 @@
     if(type === type){
       return pokemon.type.includes(type)
     }
+
   })
   return pokemonsByType
 }
 
-//Sorting AZ
+/*Sorting AZ
 export let sortAZ = ()=>{
   let sortedPokemons = pokemons.sort (function (a,z) { 
 
@@ -44,24 +55,4 @@ export let sortZA = ()=>{
   })
   console.log("Este es el ordenado de la Z-A", sortedPokemons)
   return sortedPokemons
-}
-
-
-/*let sortCards = document.getElementById("AZ").addEventListener("click", sortAZ())
-sortCards.forEach(sort => emptyCard += mainCard(sort));
-console.log("yo soy sort", sortCards); esto va en el main*/
-
-/*Sorting lower to higher and higher to lower
-export const numberedList = (x, y) =>{
-  const numberedOrder = pokemons.sort(function (a,b){
-    if (a.num > b.num){
-      let orderDefine = x;
-      return orderDefine;
-    }
-    if (a.num < b.num){
-      let orderDefinetwo = y;
-      return orderDefinetwo;
-    }
-    return 0
-    }); return numberedOrder;
-}; console.log(numberedList(1, -1));*/
+}*/

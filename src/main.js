@@ -1,5 +1,5 @@
 import data from './data/pokemon/pokemon.js';
-import {filterGeneration, filterByType, pokemons, sortAZ, sortZA} from "./data.js";
+import {filterGeneration, filterByType, pokemons} from "./data.js";
 import {mainCard} from "./pokeCards.js";
 //Obtaining pokemons data in cards
 function setCards() {
