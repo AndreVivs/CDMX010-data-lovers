@@ -1,26 +1,17 @@
- import data from './data/pokemon/pokemon.js';
- export const pokemons = data.pokemon;
- 
- //Filter by Generation
- export function filterGeneration(zone){
-  let pokemonsFiltered=data.pokemon.filter((generation)=>{
-    if(generation === generation){
-      return generation.generation.name===zone
-    }/*else{ ¿como puedo retornar setCards() cuando el identificador no obtiene el valor esperado?
-      return data.pokemon === pokemon  no retorna valor en consola*/
-   })
-   return pokemonsFiltered
- }
-
-//Filtered by type
- export const filterByType = (type) => {
-  const pokemonsByType = pokemons.filter(function(pokemon) {
-    if(type === type){
-      return pokemon.type.includes(type)
-    }
-  })
-  return pokemonsByType
-}
+//Main Card template
+export let mainCard = (pokemon) =>{
+    const structure = `
+     <div class="idPokemon" id="${pokemon.num}">
+      <article class="pokemon">
+      <img class="circle" src ="${pokemon.img}">
+      <h2 class = "card-title">${pokemon.name}</h2>
+      <p class = "card-text">${pokemon.num}</p>
+      <p class = "card-text">${pokemon.type}</p>
+      </article>
+     </div>
+    `;
+  return structure;
+} 
 
 //Sorting AZ
 export let sortAZ = ()=>{

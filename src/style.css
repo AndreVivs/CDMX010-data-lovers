@@ -14,6 +14,24 @@ html.principal{
     --blue-btn: #3E66FB;
     --yellow-title: #FFCB05;
     --blue-border-title:#2B72B9;
+    --grass: rgb(40 112 55);
+    --poison: rgb(201 128 255);
+    --fire: #f38508;
+    --flying: rgb(17 164 226);
+    --water: rgb(44 86 217);
+    --bug: rgb(118 180 26 / 87%);
+    --normal: rgb(236 86 133 / 81%);
+    --electric: rgb(245 242 54);
+    --ground: rgb(115 64 64);
+    --fighting: rgb(201 18 18);
+    --psychic: rgb(234 37 179);
+    --rock: rgb(209 183 44);
+    --ghost: rgb(73 25 86 / 74%);
+    --ice: rgb(7 181 193 / 82%);
+    --dragon: rgb(251 23 23 / 75%);
+    --dark: rgb(20 22 21);
+    --steel: rgb(74 79 105 / 62%);
+    --fairy: rgb(121 64 191 / 83%);
 }
 
 *{
@@ -39,7 +57,7 @@ header{
     width: 100%;
     min-width: 288px;
     max-width: 111px;
-    height: 210px;
+    height: 150px;
     
 }
 
@@ -60,27 +78,50 @@ header{
 }
 
 h1.title{
-    width:50%;
     font-family: 'Aclonica', sans-serif;
-    font-size: 7vmax;
+    font-size: 4vmax;
     color: var(--yellow-title);
     text-shadow: 4px 2px 1px var(--blue-border-title);
     display: inline-block;
-    margin: 20px;
-    text-align: right;
+    margin: 10px 55px 10px 61px;
+}
+.generation{
+    width: 22vw;
+    height: auto;
+    margin: 20px 40px 25px 49px;
+    border-radius: 25px;
+}
+#kantostart{
+    left: 94px;
 }
 
-nav{
-    display: flex;
+#pokemonstart{
+    left: 496.36px;
+}
 
+#jothostart{
+    left: 900px;
+}
+
+.tile-type-and-order{
+    margin:0px 3vw
+}
+
+.container--btns{
+    margin: 10px 50px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .menu{
-    width: 250px;
-    height: 40px;
+    width: 200px;
+    height: 45px;
     right: 300px;
     top: 25px;
     border-radius: 5px;
+    display: inline-flex;
+    margin: 0px 0px 10px 70vw;
 }
 
 .menu ul {
@@ -89,39 +130,35 @@ nav{
     top: 20px;
 }
 .menu a {
-    width: 250px;
-    height: 40px;
-    display: flex;
+    width: 200px;
+    height: 45px;
     padding: 1em;
-    background-color: #F9B53C;
+    background: #4891D1;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 15px;
     text-decoration: none;
     color: #ffffff;
     border-radius: 5px;
+    display: flex;
 }
+
 .menu a:hover {
-    width: 250px;
-    height: 40px;
-    background-color: #CC673B;
+    width: 200px;
+    height: 45px;
+    background-color: #484DD1;
 }
 .menu ul li ul {
-    width: 250px;
-    height: 40px;
+    width: 200px;
+    height: 45px;
     display: none;
 }
 .menu ul li a:hover + ul, .menu ul li ul:hover {
-    width: 250px;
-    height: 40px;
+    width: 200px;
+    height: 45px;
     display: block;
 }
 
-.container--btns{
-    margin: 5px 50px;
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.container--cards{
+#containerCards{
     margin: 15px;
     display: inline-flex;
     flex-direction: row;
@@ -149,107 +186,78 @@ button{
     cursor: pointer;
 }
 
-button.grass{
+button#grass{
     background-color: rgb(40 112 55);
 }
 
-button.poison{
+button#poison{
     background-color: rgb(201 128 255);
 }
 
-button.fire{
+button#fire{
     background-color: #f38508;
 }
 
-button.flying{
+button#flying{
     background-color: rgb(17 164 226);
 }
 
-button.water{
+button#water{
     background-color: rgb(44 86 217);
 }
 
-button.bug{
+button#bug{
     background-color: rgb(118 180 26 / 87%);
 }
 
-button.normal{
+button#normal{
     background-color: rgb(236 86 133 / 81%);
 }
 
-button.electric{
+button#electric{
     color: rgb(9, 7, 10);
     background-color: rgb(245 242 54);
 }
 
-button.ground{
+button#ground{
     background-color: rgb(115 64 64);
 }
 
-button.fighting{
+button#fighting{
     background-color: rgb(201 18 18);
 }
 
-button.psychic{
+button#psychic{
     background-color: rgb(234 37 179);
 }
 
-button.rock{
+button#rock{
     background-color: rgb(209 183 44);
 }
 
-button.ghost{
+button#ghost{
     background-color: rgb(73 25 86 / 74%);
 }
 
-button.ice{
+button#ice{
     background-color: rgb(7 181 193 / 82%);
 }
 
-button.dragon{
+button#dragon{
     background-color: rgb(251 23 23 / 75%);
 }
 
-button.dark{
+button#dark{
     background-color: rgb(20 22 21);
 }
 
-button.steel{
+button#steel{
     background-color: rgb(74 79 105 / 62%);
 }
 
-button.fairy{
+button#fairy{
     background-color: rgb(121 64 191 / 83%);
 }
-
-.kantostart{
-    position: absolute;
-    width: 241px;
-    height: 158px;
-    left: 94px;
-    top: 431px;
-    border-radius: 25px;
-}
-
-.pokemonstart{
-    position: absolute;
-    width: 285.78px;
-    height: 163.96px;
-    left: 496.36px;
-    top: 431px;
-    border-radius: 25px;
-    transform: rotate(0.13deg);
-}
-
-.jothostart{
-    position: absolute;
-    width: 271px;
-    height: 164px;
-    left: 900px;
-    top: 432px;
-    border-radius: 25px;
-}
-
 
 .tarjetas {
     display: flex;
@@ -290,8 +298,3 @@ button.fairy{
     border-radius:7px;
     margin: 8em auto 1em;
 }
-
-
-
-
-

@@ -1,20 +1,50 @@
-/* Aqui va el código que tenga que ver con mostrar los datos en la pantalla (interacción con el DOM). 
-Operaciones como creación de nodos.
-Registro de manejadores de eventos (event listeners o event handlers), ...*/
 import data from './data/pokemon/pokemon.js';
+import {filterGeneration, filterByType, pokemons, sortAZ, sortZA} from "./data.js";
+import {mainCard} from "./pokeCards.js";
+//Obtaining pokemons data in cards
+function setCards() {
+  let containerCards = document.getElementById("containerCards");
+  let emptyCard ="";
+  pokemons.forEach(poke => emptyCard += mainCard(poke));
 
-import {printData} from "./data.js";
+  containerCards.innerHTML = emptyCard;
+}
+setCards();
 
-import {filterGeneration} from './data.js';
+//Obtaining pokemons filtered by ganeration
+let generation = document.querySelectorAll(".generation");
+generation.forEach(function(button){
+  button.addEventListener("click", function (){
+    let containerCards = document.getElementById("containerCards");
+    let emptyCard ="";
+    let valueButton = filterGeneration(button.id)
+    console.log(valueButton)
+    valueButton.forEach(generation => emptyCard += mainCard(generation));
+    containerCards.innerHTML = emptyCard;
+  });
+}) 
 
-import {filterType} from "./data.js";
+//Sorted pokemons
 
-//printData();
-filterGeneration("kanto");
+//Obtaining pokemons filtered by type
+let type = document.querySelectorAll(".type");
+type.forEach(function(button){
+  button.addEventListener("click", function (){
+    let containerCards = document.getElementById("containerCards");
+    let emptyCard ="";
+    let valueButton = filterByType(button.id)
+    console.log(valueButton)
+    valueButton.forEach(pokeType => emptyCard += mainCard(pokeType));
+
+    containerCards.innerHTML = emptyCard;
+  });
+}) 
 
 
-//console.log("estos son todos los pokemon", data);
 
-console.log ("Generation",filterGeneration('johto'));
 
-console.log("filtrado por tipo", filterType("grass"));
+/*console.log("Generation Kanto",filterGeneration("kanto"));
+
+console.log("Generation Johto",filterGeneration("johto"));
+
+console.log("Grass type",filterByType("grass"));*/
