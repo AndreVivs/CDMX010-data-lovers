@@ -32,11 +32,10 @@ Las funciones son independientes del DOM y serán usadas desde src/main.js para:
   })
   return pokemonsByType
 }
-
-/*Sorting AZ
-export let sortAZ = ()=>{
-  let sortedPokemons = pokemons.sort (function (a,z) { 
-
+//Sorting AZ
+//tengo que pasar el parametro por esta funcion
+export let sortAZ = (pokeType)=>{
+  let sortedPokemons = pokeType.sort (function (a,z) { 
     if (a.name < z.name) return -1;
     if (a.name > z.name) return 1;
     return 0;
@@ -44,11 +43,19 @@ export let sortAZ = ()=>{
   console.log("Este es el ordenado de la A-Z", sortedPokemons)
   return sortedPokemons
 }
-
 //Sorting ZA
-export let sortZA = ()=>{
+export let sortZA = (pokeType)=>{
+  let sortedPokemons = pokeType.sort (function (a,z) { 
+    if (a.name < z.name) return 1;
+    if (a.name > z.name) return -1;
+    return 0;
+  })
+  console.log("Este es el ordenado de la Z-A", sortedPokemons)
+  return sortedPokemons
+}
+/*//Esta funcion ordena todos los pokemones
+export let sortZA = (pokemons)=>{
   let sortedPokemons = pokemons.sort (function (a,z) { 
-
     if (a.name < z.name) return 1;
     if (a.name > z.name) return -1;
     return 0;
